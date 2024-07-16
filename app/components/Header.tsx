@@ -3,6 +3,7 @@ import menu from '@/assets/images/menu.svg'
 import { Button } from '@/components/ui/button';
 import Image from 'next/image'
 import { useState } from 'react';
+
 const Header = () => {
 
     const openMenu = (): void => {
@@ -18,7 +19,7 @@ const Header = () => {
     
     return (
         <>
-        <header>
+        <header className='lg:h-[996px]'>
             <nav className="relative bg-white py-6">
                 <div className="container mx-auto flex items-center">
                     <div className="flex flex-grow">
@@ -40,6 +41,16 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
+
+            {/* <div className="container flex flex-row justify-center bg-blue-500">
+                <div className="flex flex-col lg:w-[895px] bg-green-400">
+                    <h1 className="text-7xl w-auto text-center font-bold pb-3">Transforma tus ideas en realidades <span>digitales</span></h1>
+                    <p className="text-center"> Convertimos tus conceptos en soluciones digitales innovadoras, diseñadas a medida para impulsar tu negocio y optimizar tus procesos.</p>
+                    <div className="pt-8 flex justify-center bg-red-400">
+                        <Button className="lg:w-[208px]">Contactanos</Button>
+                    </div>
+                </div>
+            </div> */}
         </header>
         </>
     );
