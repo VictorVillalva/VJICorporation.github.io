@@ -30,12 +30,12 @@ const Header = () => {
                     <div className="flex lg:hidden">
                         <Image src={menu} alt='Menu' onClick={openMenu}/>
                     </div>
-                    <div id='menu' className="absolute w-full bg-red-600 left-0 top-20 hidden  flex-grow justify-between items-center lg:flex lg:relative lg:w-auto lg:top-0 lg:py-0 lg:bg-transparent ">
+                    <div id='menu' className="absolute w-full left-0 top-20 hidden  flex-grow justify-between items-center lg:flex lg:relative lg:w-auto lg:top-0 lg:py-0 lg:bg-transparent ">
                         <div className='flex flex-col lg:mb-0 lg:flex-grow lg:flex-row'>
-                            <a href="#" className=' border border-white bg-white text-center py-8 transition hover:bg-slate-100 hover:border-slate-300 lg:mr-7 lg:mb-0 lg:py-0 lg:bg-transparent lg:hover:bg-transparent lg:border-0 lg:border-b-4 lg:hover:border-pink-950 lg:hover:text-pink-950 lg:text-zinc-300'>Inicio</a>
-                            <a href="#" className='border border-white bg-white text-center py-8 transition hover:bg-slate-100 hover:border-slate-300 lg:mr-7 lg:mb-0 lg:py-0 lg:bg-transparent lg:hover:bg-transparent lg:border-0 lg:border-b-4 lg:hover:border-pink-950 lg:hover:text-pink-950 lg:text-zinc-300'>Nosotros</a>
-                            <a href="#" className='border border-white bg-white text-center py-8 transition hover:bg-slate-100 hover:border-slate-300 lg:mr-7 lg:mb-0 lg:py-0 lg:bg-transparent lg:hover:bg-transparent lg:border-0 lg:border-b-4 lg:hover:border-pink-950 lg:hover:text-pink-950 lg:text-zinc-300'>Servicios</a>
-                            <a href="#" className='border border-white bg-white text-center py-8 transition hover:bg-slate-100 hover:border-slate-300 lg:mr-7 lg:mb-0 lg:py-0 lg:bg-transparent lg:hover:bg-transparent lg:border-0 lg:border-b-4 lg:hover:border-pink-950 lg:hover:text-pink-950 lg:text-zinc-300'>Contactanos</a>
+                            <a href="#" className=' border border-white bg-white text-center py-8 transition hover:bg-slate-100 hover:border-slate-300 lg:mr-7 lg:mb-0 lg:py-0 lg:bg-transparent lg:hover:bg-transparent lg:border-0 lg:border-b-4 lg:hover:border-[#35012C] lg:hover:text-[#35012C] lg:text-zinc-300'>Inicio</a>
+                            <a href="#" className='border border-white bg-white text-center py-8 transition hover:bg-slate-100 hover:border-slate-300 lg:mr-7 lg:mb-0 lg:py-0 lg:bg-transparent lg:hover:bg-transparent lg:border-0 lg:border-b-4 lg:hover:border-[#35012C] lg:hover:text-[#35012C] lg:text-zinc-300'>Nosotros</a>
+                            <a href="#" className='border border-white bg-white text-center py-8 transition hover:bg-slate-100 hover:border-slate-300 lg:mr-7 lg:mb-0 lg:py-0 lg:bg-transparent lg:hover:bg-transparent lg:border-0 lg:border-b-4 lg:hover:border-[#35012C] lg:hover:text-[#35012C] lg:text-zinc-300'>Servicios</a>
+                            <a href="#" className='border border-white bg-white text-center py-8 transition hover:bg-slate-100 hover:border-slate-300 lg:mr-7 lg:mb-0 lg:py-0 lg:bg-transparent lg:hover:bg-transparent lg:border-0 lg:border-b-4 lg:hover:border-[#35012C] lg:hover:text-[#35012C] lg:text-zinc-300'>Contactanos</a>
                         </div>
                         <div className='hidden lg:block'>
                             <Button>Contactanos</Button>
@@ -43,9 +43,9 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
-            <div className="container flex flex-row justify-center bg-red-500 lg:h-[950px]">
+            <div className="container flex flex-row justify-center  lg:h-[950px]">
                 <div className="flex flex-col lg:w-[895px] mt-40">
-                    <h1 className="text-7xl w-auto text-center font-bold pb-3 text-pink-950">Transforma tus ideas en realidades <span className='text-gradient'>digitales</span></h1>
+                    <h1 className="text-7xl w-auto text-center font-bold pb-3 text-[#35012C]">Transforma tus ideas en realidades <span className='text-gradient'>digitales</span></h1>
                     <p className="text-center"> Convertimos tus conceptos en soluciones digitales innovadoras, diseñadas a medida para impulsar tu negocio y optimizar tus procesos.</p>
                     <div className="pt-8 flex justify-center">
                         <Button className="lg:w-[208px] ml-8">Contactanos</Button>

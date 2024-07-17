@@ -10,6 +10,10 @@
   -webkit-text-fill-color: transparent;
 }
 
+.bg-gradient1{
+  background: linear-gradient(180deg, #35012C 0%, #9B0381 50.5%, #FFF 100%);
+}
+
   @layer base {
     :root {
       --background: 0 0% 100%;

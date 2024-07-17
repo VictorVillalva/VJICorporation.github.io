@@ -1,10 +1,10 @@
 'use client'
 
-import { Button } from "@/components/ui/button";
 import Header from "./components/Header";
 import Services from "./components/Services";
 import Banner from "./components/Banner";
-import Section from "./components/Section";
+import SectionRigth from "./components/SectionRight";
+import Comment from "./components/Comments";
 
 export default function Home() {
   return (
@@ -12,7 +12,8 @@ export default function Home() {
       <Header />
       <Services />
       <Banner />
-      <Section />
+      <SectionRigth />
+      <Comment />
     </main>
   );
 }

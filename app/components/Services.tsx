@@ -48,7 +48,7 @@ const services = () => {
         <div className="container mt-14">
             <div className="flex flex-col items-center mb-6">
                 <span className="text-sm tracking-[8.40px] text-neutral-400 mb-3">Nuestros servicios</span>
-                <h2 className="font-semibold text-5xl text-pink-950">¿Qué necesitas?</h2>
+                <h2 className="font-semibold text-5xl text-[#35012C]">¿Qué necesitas?</h2>
             </div>
             <div className="h-[680px] flex justify-center items-center gap-20 flex-wrap">
                 {infoService.map((data, index) => (
