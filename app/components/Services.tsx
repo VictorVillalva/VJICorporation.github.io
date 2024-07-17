@@ -4,6 +4,8 @@ import Card from "./Card";
 import ds from '../../assets/images/code.svg'
 import dw from '../../assets/images/diseño-web.svg'
 import ms from '../../assets/images/mantenimiento.svg'
+import dm from '../../assets/images/movil-d.svg'
+import cl from '../../assets/images/cloud.svg'
 import { describe } from "node:test";
 
 interface InfoService {
@@ -31,22 +33,22 @@ const services = () => {
             img: ms
         },
         {
-            title: "Mantenimiento de software",
-            description: "Damos mantenimiento a tu software para que puedas mejorar su eficiencia y eficacia.",
-            img: ms
+            title: "Desarrollo movil",
+            description: "Hacemos realidad tu idea por medio de nuestro equipo de desarrollo de aplicaciones móviles.",
+            img: dm
         },
         {
-            title: "Mantenimiento de software",
-            description: "Damos mantenimiento a tu software para que puedas mejorar su eficiencia y eficacia.",
-            img: ms
+            title: "Desarrollo en la nube",
+            description: "Nos encargamos de migrar tus servicios a la nube para tener un mejor control de ellos.",
+            img: cl
         }
     ];
     return (
         <>
         <div className="container mt-14">
-            <div className="flex flex-col items-center bg-red-400">
-                <span className="text-sm">Nuestros servicios</span>
-                <h2 className="font-semibold text-5xl">¿Qué necesitas?</h2>
+            <div className="flex flex-col items-center mb-6">
+                <span className="text-sm tracking-[8.40px] text-neutral-400 mb-3">Nuestros servicios</span>
+                <h2 className="font-semibold text-5xl text-pink-950">¿Qué necesitas?</h2>
             </div>
             <div className="h-[680px] flex justify-center items-center gap-20 flex-wrap">
                 {infoService.map((data, index) => (

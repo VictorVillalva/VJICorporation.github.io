@@ -1,5 +1,7 @@
 import Logo  from '@/assets/images/Logo-VJI.svg'
 import menu from '@/assets/images/menu.svg'
+import bg1 from '@/assets/images/bg-figure.png'
+import bg2 from '@/assets/images/bg-figure-2.png'
 import { Button } from '@/components/ui/button';
 import Image from 'next/image'
 import { useState } from 'react';
@@ -41,16 +43,15 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
-
-            {/* <div className="container flex flex-row justify-center bg-blue-500">
-                <div className="flex flex-col lg:w-[895px] bg-green-400">
-                    <h1 className="text-7xl w-auto text-center font-bold pb-3">Transforma tus ideas en realidades <span>digitales</span></h1>
+            <div className="container flex flex-row justify-center bg-red-500 lg:h-[950px]">
+                <div className="flex flex-col lg:w-[895px] mt-40">
+                    <h1 className="text-7xl w-auto text-center font-bold pb-3 text-pink-950">Transforma tus ideas en realidades <span className='text-gradient'>digitales</span></h1>
                     <p className="text-center"> Convertimos tus conceptos en soluciones digitales innovadoras, diseñadas a medida para impulsar tu negocio y optimizar tus procesos.</p>
-                    <div className="pt-8 flex justify-center bg-red-400">
-                        <Button className="lg:w-[208px]">Contactanos</Button>
+                    <div className="pt-8 flex justify-center">
+                        <Button className="lg:w-[208px] ml-8">Contactanos</Button>
                     </div>
                 </div>
-            </div> */}
+            </div>
         </header>
         </>
     );
