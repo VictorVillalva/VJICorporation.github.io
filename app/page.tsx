@@ -5,6 +5,7 @@ import Services from "./components/Services";
 import Banner from "./components/Banner";
 import SectionRigth from "./components/SectionRight";
 import Comment from "./components/Comments";
+import ContactUs from "./components/ContactUs";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Banner />
       <SectionRigth />
       <Comment />
+      <ContactUs />
     </main>
   );
 }

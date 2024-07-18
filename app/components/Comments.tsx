@@ -63,7 +63,7 @@ const section = () => {
     return (
         <>
         <div className="container mt-28 mb-28">
-            <hr className='mb-10'></hr>
+            <hr className='mb-12'></hr>
             <div className="flex flex-col items-center">
                 <div className="mb-20 flex flex-col items-center">
                     <span className="text-sm tracking-[8.40px] text-neutral-400 mb-3">Nuestras Referencias</span>
@@ -71,6 +71,17 @@ const section = () => {
                     <p className='mt-2.5 text-slate-500'>Siempre buscamos brindar un servicio de calidad a nuestros clientes.</p>
                 </div>
                 <Carousel className="w-full px-12">
+                <CarouselContent className="-ml-1">
+                    {comment.map((data, index) => (
+                    <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
+                        <div className="p-1">
+                            <CardComment key={index} img={data.img} name={data.name} description={data.description} />
+                        </div>
+                    </CarouselItem>
+                    ))}
+                </CarouselContent>
+                </Carousel>
+                <Carousel className="w-full px-12 mt-5">
                 <CarouselContent className="-ml-1">
                     {comment.map((data, index) => (
                     <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">

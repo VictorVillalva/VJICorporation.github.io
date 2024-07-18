@@ -2,6 +2,7 @@ import Logo  from '@/assets/images/Logo-VJI.svg'
 import menu from '@/assets/images/menu.svg'
 import bg1 from '@/assets/images/bg-figure.png'
 import bg2 from '@/assets/images/bg-figure-2.png'
+import bg3 from '@/assets/images/bg-figure-3.png'
 import { Button } from '@/components/ui/button';
 import Image from 'next/image'
 import { useState } from 'react';
@@ -43,7 +44,8 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
-            <div className="container flex flex-row justify-center  lg:h-[950px]">
+            <div className="container relative flex flex-row justify-center lg:h-[950px]">
+                <Image src={bg1} alt="" className='absolute top-3 left-[100px] '/>
                 <div className="flex flex-col lg:w-[895px] mt-40">
                     <h1 className="text-7xl w-auto text-center font-bold pb-3 text-[#35012C]">Transforma tus ideas en realidades <span className='text-gradient'>digitales</span></h1>
                     <p className="text-center"> Convertimos tus conceptos en soluciones digitales innovadoras, diseñadas a medida para impulsar tu negocio y optimizar tus procesos.</p>
@@ -51,6 +53,8 @@ const Header = () => {
                         <Button className="lg:w-[208px] ml-8">Contactanos</Button>
                     </div>
                 </div>
+                <Image src={bg2} alt="" className='absolute top-[360px] right-[100px]'/>
+                <Image src={bg3} alt="" className='absolute bottom-[200px] left-[20px] '/>
             </div>
         </header>
         </>
