@@ -334,7 +334,7 @@ type ChartConfig = {
     [key: string]: ChartConfigItem;
 };
 
-const chartConfig = {
+const chartConfig: ChartConfig = {
     realScoreBehavior: {
         label: "Score Behavior",
         color: "hsl(var(--chart-1))",
@@ -517,15 +517,17 @@ const Categories = () => {
                 strokeWidth={2}
                 dot={false}
                 />
-                {chartConfig[activeChart]?.holtwinter && (
-                    <Line
-                        type="monotone"
-                        dataKey={chartConfig[activeChart].holtwinter}
-                        stroke={chartConfig[chartConfig[activeChart].holtwinter].color}
-                        strokeWidth={2}
-                        dot={false}
-                    />
-                )}
+                    {chartConfig[activeChart]?.holtwinter && (
+                        <Line
+                            type="monotone"
+                            dataKey={chartConfig[activeChart].holtwinter}
+                            stroke={
+                                chartConfig[chartConfig[activeChart].holtwinter]?.color ?? "black"
+                            } // Usa un color por defecto si no existe
+                            strokeWidth={2}
+                            dot={false}
+                        />
+                    )}
             </LineChart>
             </ChartContainer>
         </CardContent>
