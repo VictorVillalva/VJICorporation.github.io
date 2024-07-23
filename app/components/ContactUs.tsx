@@ -52,12 +52,13 @@ const Contact = () => {
 
     return (
         <>
-        <div className="container mt-28 mb-28">
-            <Card className='w-full flex p-2'>
-                <Card className='bg-[#35012C] w-[800px]'>
-                    <Image src={bgVJI} alt="" className='object-cover w-full h-full'/>
+        <div id="contact" className="container mt-28 mb-28">
+            <hr className='mb-20' />
+            <Card className='lg:w-full flex p-2 flex-col lg:flex-row'>
+                <Card className='lg:w-[800px]'>
+                    <Image src={bgVJI} alt="" className='lg:object-cover lg:w-full lg:h-full'/>
                 </Card>
-                <div className="flex flex-col justify-center w-[700px] h-[600px] pt-5 pb-10 gap-8">
+                <div className="flex flex-col justify-center lg:w-[700px] lg:h-[600px] pt-5 pb-10 gap-8">
                     <div className="flex flex-col px-5">
                         <h2 className='text-4xl font-semibold text-[#35012C]'>Contactanos</h2>
                         <span className='text-slate-500'>Envianos tu mensaje y trataremos de ponernos en contacto lo mas rapido posible.</span>
@@ -88,8 +89,8 @@ const Contact = () => {
                             <Textarea id='message' placeholder='Escribe tu mensaje aqui' className='h-full'></Textarea>
                         </div>
                     </form>
-                    <div className="flex flex-col items-end">
-                        <Button className='w-[200px]'>Enviar</Button>
+                    <div className="flex flex-col lg:items-end">
+                        <Button className='lg:w-[200px]'>Enviar</Button>
                     </div>
                 </div>
             </Card>

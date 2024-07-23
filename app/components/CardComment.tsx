@@ -21,7 +21,7 @@ interface myProps{
 const cardComent: React.FC<myProps> = ({img, name, description}) => {
     return (
         <>
-            <Card className="w-[350px] hover:shadow-md">
+            <Card className="hover:shadow-md h-[200px]">
                 <CardHeader>
                     <CardTitle className="flex items-center gap-3 mb-auto">
                     <Avatar>

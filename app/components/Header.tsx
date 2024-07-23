@@ -6,6 +6,9 @@ import bg3 from '@/assets/images/bg-figure-3.png'
 import { Button } from '@/components/ui/button';
 import Image from 'next/image'
 import { useState } from 'react';
+import { Link } from 'react-scroll';
+
+
 
 const Header = () => {
 
@@ -22,7 +25,7 @@ const Header = () => {
     
     return (
         <>
-        <header className='lg:h-[996px]'>
+        <header id="inicio" className=''>
             <nav className="relative bg-white py-6">
                 <div className="container mx-auto flex items-center">
                     <div className="flex flex-grow">
@@ -31,12 +34,12 @@ const Header = () => {
                     <div className="flex lg:hidden">
                         <Image src={menu} alt='Menu' onClick={openMenu}/>
                     </div>
-                    <div id='menu' className="absolute w-full left-0 top-20 hidden  flex-grow justify-between items-center lg:flex lg:relative lg:w-auto lg:top-0 lg:py-0 lg:bg-transparent ">
+                    <div id='menu' className="absolute w-full left-0 top-20 hidden flex-grow justify-between items-center lg:flex lg:relative lg:w-auto lg:top-0 lg:py-0 lg:bg-transparent cursor-pointer">
                         <div className='flex flex-col lg:mb-0 lg:flex-grow lg:flex-row'>
-                            <a href="#" className=' border border-white bg-white text-center py-8 transition hover:bg-slate-100 hover:border-slate-300 lg:mr-7 lg:mb-0 lg:py-0 lg:bg-transparent lg:hover:bg-transparent lg:border-0 lg:border-b-4 lg:hover:border-[#35012C] lg:hover:text-[#35012C] lg:text-zinc-300'>Inicio</a>
-                            <a href="#" className='border border-white bg-white text-center py-8 transition hover:bg-slate-100 hover:border-slate-300 lg:mr-7 lg:mb-0 lg:py-0 lg:bg-transparent lg:hover:bg-transparent lg:border-0 lg:border-b-4 lg:hover:border-[#35012C] lg:hover:text-[#35012C] lg:text-zinc-300'>Nosotros</a>
-                            <a href="#" className='border border-white bg-white text-center py-8 transition hover:bg-slate-100 hover:border-slate-300 lg:mr-7 lg:mb-0 lg:py-0 lg:bg-transparent lg:hover:bg-transparent lg:border-0 lg:border-b-4 lg:hover:border-[#35012C] lg:hover:text-[#35012C] lg:text-zinc-300'>Servicios</a>
-                            <a href="#" className='border border-white bg-white text-center py-8 transition hover:bg-slate-100 hover:border-slate-300 lg:mr-7 lg:mb-0 lg:py-0 lg:bg-transparent lg:hover:bg-transparent lg:border-0 lg:border-b-4 lg:hover:border-[#35012C] lg:hover:text-[#35012C] lg:text-zinc-300'>Contactanos</a>
+                            <Link to="inicio" smooth={true} duration={500} className='border border-white bg-white text-center py-8 transition hover:bg-slate-100 hover:border-slate-300 lg:mr-7 lg:mb-0 lg:py-0 lg:bg-transparent lg:hover:bg-transparent lg:border-0 lg:border-b-4 lg:hover:border-[#35012C] lg:hover:text-[#35012C] lg:text-zinc-300'>Inicio</Link>
+                            <Link to="service" smooth={true} duration={500} className='border border-white bg-white text-center py-8 transition hover:bg-slate-100 hover:border-slate-300 lg:mr-7 lg:mb-0 lg:py-0 lg:bg-transparent lg:hover:bg-transparent lg:border-0 lg:border-b-4 lg:hover:border-[#35012C] lg:hover:text-[#35012C] lg:text-zinc-300'>Servicios</Link>
+                            <Link to="aboutUs" smooth={true} duration={500} className='border border-white bg-white text-center py-8 transition hover:bg-slate-100 hover:border-slate-300 lg:mr-7 lg:mb-0 lg:py-0 lg:bg-transparent lg:hover:bg-transparent lg:border-0 lg:border-b-4 lg:hover:border-[#35012C] lg:hover:text-[#35012C] lg:text-zinc-300'>Nosotros</Link>
+                            <Link to="contact" smooth={true} duration={500} className='border border-white bg-white text-center py-8 transition hover:bg-slate-100 hover:border-slate-300 lg:mr-7 lg:mb-0 lg:py-0 lg:bg-transparent lg:hover:bg-transparent lg:border-0 lg:border-b-4 lg:hover:border-[#35012C] lg:hover:text-[#35012C] lg:text-zinc-300'>Contactanos</Link>
                         </div>
                         <div className='hidden lg:block'>
                             <Button>Contactanos</Button>
@@ -44,18 +47,6 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
-            <div className="container relative flex flex-row justify-center lg:h-[950px]">
-                <Image src={bg1} alt="" className='absolute top-3 left-[100px] '/>
-                <div className="flex flex-col lg:w-[895px] mt-40">
-                    <h1 className="text-7xl w-auto text-center font-bold pb-3 text-[#35012C]">Transforma tus ideas en realidades <span className='text-gradient'>digitales</span></h1>
-                    <p className="text-center"> Convertimos tus conceptos en soluciones digitales innovadoras, diseñadas a medida para impulsar tu negocio y optimizar tus procesos.</p>
-                    <div className="pt-8 flex justify-center">
-                        <Button className="lg:w-[208px] ml-8">Contactanos</Button>
-                    </div>
-                </div>
-                <Image src={bg2} alt="" className='absolute top-[360px] right-[100px]'/>
-                <Image src={bg3} alt="" className='absolute bottom-[200px] left-[20px] '/>
-            </div>
         </header>
         </>
     );

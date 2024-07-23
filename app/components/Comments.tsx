@@ -66,22 +66,22 @@ const section = () => {
             <hr className='mb-12'></hr>
             <div className="flex flex-col items-center">
                 <div className="mb-20 flex flex-col items-center">
-                    <span className="text-sm tracking-[8.40px] text-neutral-400 mb-3">Nuestras Referencias</span>
-                    <h2 className='font-semibold text-5xl text-pink-950'>Lo que nuestros clientes dicen</h2>
-                    <p className='mt-2.5 text-slate-500'>Siempre buscamos brindar un servicio de calidad a nuestros clientes.</p>
+                    <span className="text-sm tracking-[8.40px] text-neutral-400 mb-3 text-center">Nuestras Referencias</span>
+                    <h2 className='font-semibold text-5xl text-pink-950 text-center'>Lo que nuestros clientes dicen</h2>
+                    <p className='mt-2.5 text-slate-500 text-center'>Siempre buscamos brindar un servicio de calidad a nuestros clientes.</p>
                 </div>
-                <Carousel className="w-full px-12">
+                <Carousel className="w-full lg:px-12">
                 <CarouselContent className="-ml-1">
                     {comment.map((data, index) => (
                     <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
-                        <div className="p-1">
-                            <CardComment key={index} img={data.img} name={data.name} description={data.description} />
+                        <div className="p-1 ">
+                            <CardComment key={index} img={data.img} name={data.name} description={data.description}/>
                         </div>
                     </CarouselItem>
                     ))}
                 </CarouselContent>
                 </Carousel>
-                <Carousel className="w-full px-12 mt-5">
+                <Carousel className="w-full lg:px-12 mt-5">
                 <CarouselContent className="-ml-1">
                     {comment.map((data, index) => (
                     <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
