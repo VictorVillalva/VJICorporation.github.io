@@ -9,7 +9,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "border border-white bg-pink-950 text-primary-foreground transition ease-in-out duration-500  lg:mr-10 hover:bg-white hover:border-pink-950 hover:text-pink-950",
+        default: "border border-transparent bg-[#35012C] text-primary-foreground transition ease-in-out duration-500  lg:mr-10 hover:bg-white hover:border-[#35012C] hover:text-[#35012C]",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
