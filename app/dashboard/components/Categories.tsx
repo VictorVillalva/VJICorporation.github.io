@@ -334,7 +334,7 @@ type ChartConfig = {
     [key: string]: ChartConfigItem;
 };
 
-const chartConfig: ChartConfig = {
+const chartConfig = {
     realScoreBehavior: {
         label: "Score Behavior",
         color: "hsl(var(--chart-1))",
@@ -398,11 +398,7 @@ const chartConfig: ChartConfig = {
         label: "HW Score Travel Time",
         color: "hsl(var(--chart-2))",
     },
-    views: {
-        label: "Datos",
-        color: "hsl(var(--chart-1))"
-    }
-}
+} satisfies ChartConfig;
 
 const formatNumber = (num: number) => num.toLocaleString();
 
