@@ -404,7 +404,6 @@ const formatNumber = (num: number) => num.toLocaleString();
 
 const Categories = () => {
     const [activeChart, setActiveChart] = React.useState<keyof typeof chartConfig>("realScoreBehavior")
-    const [activeHoltWinter, setActiveHoltWinter] = React.useState<keyof typeof chartConfig>("holtWinter")
     const [getCategoriesData, setGetCategoriesData] = useState<getCategoriesData[]>([]);
 
     useEffect(() => {
