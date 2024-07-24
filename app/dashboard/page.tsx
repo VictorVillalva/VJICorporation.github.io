@@ -3,6 +3,7 @@
 import Categories2 from './components/Categories'
 import Report from './components/Report'
 import ReportCategory from './components/ReportCategory'
+import TableComents from './components/Table'
 
 import Link from "next/link"
 import {
@@ -87,6 +88,9 @@ const Dashboard = () => {
                 </div>
                 <div className="tables p-4">
                     <Categories2 />
+                </div>
+                <div className="tables2">
+                    <TableComents />
                 </div>
             </div>
         </div>
