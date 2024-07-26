@@ -44,26 +44,31 @@ const Contact = () => {
         mensaje: '',
     });
     
-    const handleChange = (e) => {
-        const { name, value } = e.target;
+    const handleChange = (e:any) => {
+        const { name, value } = e.target.value;
         setFormData({
-          ...formData,
-          [name]: value,
+            ...formData,
+            [name]: value,
         });
     };
     
-    const handleSubmit = (e) => {
+    const handleSubmit = (e:any) => {
         e.preventDefault();
+        const { nombre, apellido, correo, telefono, mensaje } = formData;
+        if (!nombre || !apellido || !correo || !telefono || !mensaje) {
+            alert('Por favor, completa todos los campos.');
+            return;
+        }
         // Aquí puedes agregar la lógica para enviar los datos si es necesario
         alert('Datos enviados');
         setFormData({
-          nombre: '',
-          apellido: '',
-          correo: '',
-          telefono: '',
-          mensaje: '',
+            nombre: '',
+            apellido: '',
+            correo: '',
+            telefono: '',
+            mensaje: '',
         });
-    };
+    };  
 
     return (
         <>
@@ -78,7 +83,7 @@ const Contact = () => {
                         <h2 className='text-4xl font-semibold text-[#35012C]'>Contactanos</h2>
                         <span className='text-slate-500'>Envianos tu mensaje y trataremos de ponernos en contacto lo mas rapido posible.</span>
                     </div>
-                    <form action="" className='flex flex-col justify-start gap-5 mx-5'>
+                    <form  onSubmit={handleSubmit} action="" className='flex flex-col justify-start gap-5 mx-5'>
                         <div className="flex flex-row justify-around gap-8">
                             <div className="w-full">
                                 <Label>Nombre</Label>
