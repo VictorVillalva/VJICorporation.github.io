@@ -11,22 +11,22 @@ import {
 } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import React from 'react'
+import imga from "@/assets/images/clientes.png"
 
 interface myProps{
-    img: string;
     name: string;
     description: string;
 }
 
-const cardComent: React.FC<myProps> = ({img, name, description}) => {
+const cardComent: React.FC<myProps> = ({ name, description}) => {
     return (
         <>
             <Card className="hover:shadow-md h-[200px]">
                 <CardHeader>
                     <CardTitle className="flex items-center gap-3 mb-auto">
                     <Avatar>
-                        <AvatarImage src={img} />
-                        <AvatarFallback>CN</AvatarFallback>
+                        <AvatarImage src="@/assets/images/clientes.png" alt="HL" />
+                        <AvatarFallback>CL</AvatarFallback>
                     </Avatar>
                     {name}
                     </CardTitle>

@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/card"
 import { Textarea } from '@/components/ui/textarea'
 import prueba from '@/assets/images/vji-icono.png'
+import { useState } from 'react'
 
 const formSchema = z.object({
     username: z.string().min(2).max(50),
@@ -35,20 +36,34 @@ const formSchema = z.object({
 })
 
 const Contact = () => {
-    // 1. Define your form.
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
-        defaultValues: {
-        username: " ",
-        },
-    })
-
-    // 2. Define a submit handler.
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        // Do something with the form values.
-        // ✅ This will be type-safe and validated.
-        console.log(values)
-    }
+    const [formData, setFormData] = useState({
+        nombre: '',
+        apellido: '',
+        correo: '',
+        telefono: '',
+        mensaje: '',
+    });
+    
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+          ...formData,
+          [name]: value,
+        });
+    };
+    
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Aquí puedes agregar la lógica para enviar los datos si es necesario
+        alert('Datos enviados');
+        setFormData({
+          nombre: '',
+          apellido: '',
+          correo: '',
+          telefono: '',
+          mensaje: '',
+        });
+    };
 
     return (
         <>
@@ -67,31 +82,31 @@ const Contact = () => {
                         <div className="flex flex-row justify-around gap-8">
                             <div className="w-full">
                                 <Label>Nombre</Label>
-                                <Input type="text" />
+                                <Input type="text" name='nombre' value={formData.nombre} onChange={handleChange}/>
                             </div>
                             <div className="w-full">
                                 <Label>Apellido</Label>
-                                <Input />
+                                <Input name='apellido' value={formData.apellido} onChange={handleChange} />
                             </div>
                         </div>
                         <div className="flex flex-row justify-around gap-8">
                             <div className="w-full">
                                 <Label>Correo</Label>
-                                <Input type="email" />
+                                <Input type="email" name='correo' value={formData.correo} onChange={handleChange}/>
                             </div>
                             <div className="w-full">
                                 <Label>Telefono</Label>
-                                <Input type="tel" />
+                                <Input type="tel" name='telefono' value={formData.telefono} onChange={handleChange}/>
                             </div>
                         </div>
                         <div className="flex flex-col h-[200px] gap-2.5">
                             <Label htmlFor=''>Mensaje</Label>
-                            <Textarea id='message' placeholder='Escribe tu mensaje aqui' className='h-full'></Textarea>
+                            <Textarea id='message' placeholder='Escribe tu mensaje aqui' className='h-full' name='mensaje' value={formData.mensaje} onChange={handleChange}></Textarea>
+                        </div>
+                        <div className="flex flex-col lg:items-end">
+                        <Button type="submit" className='lg:w-[200px]'>Enviar</Button>
                         </div>
                     </form>
-                    <div className="flex flex-col lg:items-end">
-                        <Button className='lg:w-[200px]'>Enviar</Button>
-                    </div>
                 </div>
             </Card>
         </div>
