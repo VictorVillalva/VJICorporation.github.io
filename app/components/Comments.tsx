@@ -87,7 +87,7 @@ const section = () => {
                     {comment.map((data, index) => (
                     <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
                         <div className="p-1">
-                            <CardComment key={index} img={data.img} name={data.name} description={data.description} />
+                            <CardComment key={index} name={data.name} description={data.description} />
                         </div>
                     </CarouselItem>
                     ))}
