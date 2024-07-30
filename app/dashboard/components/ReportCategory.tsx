@@ -17,11 +17,7 @@ import {
 
 
 
-interface getPredictData{
-    date:string;
-    HWScore:number;
-    RealScore:number;
-}
+
 const chartData2 = [
     { date: "January", desktop: 186, mobile: 80 },
     { date: "February", desktop: 305, mobile: 200 },
@@ -30,14 +26,17 @@ const chartData2 = [
     { date: "May", desktop: 209, mobile: 130 },
     { date: "June", desktop: 214, mobile: 140 },
 ]
+
+interface getPredictData{
+    date:string;
+    HWScore:number;
+    RealScore:number;
+}
+
 const chartConfig2 = {
     HWScore: {
-        label: "HWScore",
+        label: "Predicció de Puntaje",
         color: "hsl(var(--chart-1))",
-    },
-    RealScore: {
-        label: "RealScore",
-        color: "hsl(var(--chart-2))",
     },
 } satisfies ChartConfig
 
@@ -67,8 +66,8 @@ const ReportCategory = () => {
     return (
         <Card>
             <CardHeader>
-                <CardTitle>Reporte por categoria</CardTitle>
-                <CardDescription>January - June 2024</CardDescription>
+                <CardTitle>Predicción de servicios</CardTitle>
+                {/* <CardDescription>January - June 2024</CardDescription> */}
             </CardHeader>
             <CardContent>
                 <ChartContainer config={chartConfig2}  className="lg:h-[100px] lg:w-full">
@@ -93,13 +92,6 @@ const ReportCategory = () => {
                     dataKey="HWScore"
                     type="monotone"
                     stroke="var(--color-HWScore)"
-                    strokeWidth={2}
-                    dot={false}
-                    />
-                    <Line
-                    dataKey="RealScore"
-                    type="monotone"
-                    stroke="var(--color-RealScore)"
                     strokeWidth={2}
                     dot={false}
                     />

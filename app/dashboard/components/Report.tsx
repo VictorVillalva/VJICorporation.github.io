@@ -15,18 +15,16 @@ import {
     ChartTooltip,
     ChartTooltipContent,
 } from "@/components/ui/chart"
-
-
-const chartConfigReportCompleted = {
-    score: {
-        label: "Datos reales",
-        color: "hsl(var(--chart-3))",
-    },
-} satisfies ChartConfig
-
 import * as React from "react"
 import { useEffect, useState } from "react";
 import axios from "axios";
+
+const chartConfigReportCompleted = {
+    score: {
+        label: "Puntaje",
+        color: "hsl(var(--chart-3))",
+    },
+} satisfies ChartConfig
 
 interface getTotal{
     date:string;
@@ -53,8 +51,7 @@ const Report = () => {
     return (
         <Card>
         <CardHeader>
-            <CardTitle>Reporte completo</CardTitle>
-            <CardDescription>January - June 2024</CardDescription>
+            <CardTitle>Evaluación de servicio general</CardTitle>
         </CardHeader>
         <CardContent>
             <ChartContainer config={chartConfigReportCompleted} className="lg:h-[100px] lg:w-full">
