@@ -77,7 +77,7 @@ const TableComment = () => {
             
         } catch (e) {
             console.error('Error sending answer:', error);
-            alert('Error de envio!');
+            alert('Hay groserías en el texto. Por favor, modifica tu respuesta.');
         }
     }
     return (
