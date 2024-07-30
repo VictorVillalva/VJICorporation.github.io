@@ -336,66 +336,66 @@ type ChartConfig = {
 
 const chartConfig: ChartConfig = {
     realScoreBehavior: {
-        label: "Score Behavior",
+        label: "Puntuación Comportamiento",
         color: "hsl(var(--chart-1))",
         holtwinter: "HWScoreBehavior",
     },
     HWScoreBehavior: {
-        label: "HW Score Behavior",
+        label: "Predicción Puntuación Comportamiento",
         color: "hsl(var(--chart-2))",
     },
     realScoreDriver: {
-        label: "Score Driver",
+        label: "Puntuación Conductor",
         color: "hsl(var(--chart-1))",
         holtwinter: "HWScoreDriver",
     },
     HWScoreDriver: {
-        label: "HW Score Driver",
+        label: "Predicción Puntuación Conductor",
         color: "hsl(var(--chart-2))",
     },
     realScoreNavigation: {
-        label: "Score Navigation",
+        label: "Puntuación Navegación",
         color: "hsl(var(--chart-1))",
         holtwinter: "HWScoreNavigation",
     },
     HWScoreNavigation: {
-        label: "HW Score Navigation",
+        label: "Predicción Puntuación Navegación",
         color: "hsl(var(--chart-2))",
     },
     realScoreService: {
-        label: "Score Service",
+        label: "Puntuación Servicio",
         color: "hsl(var(--chart-1))",
         holtwinter: "HWScoreService",
     },
     HWScoreService: {
-        label: "HW Score Service",
+        label: "Predicción Puntuación Servicio",
         color: "hsl(var(--chart-2))",
     },
     realScoreStops: {
-        label: "Score Stops",
+        label: "Puntuación Paradas",
         color: "hsl(var(--chart-1))",
         holtwinter: "HWScoreStops",
     },
     HWScoreStops: {
-        label: "HW Score Stops",
+        label: "Predicción Puntuación Paradas",
         color: "hsl(var(--chart-2))",
     },
     realScoreTrafficSign: {
-        label: "Score Traffic Sign",
+        label: "Puntuación Trafico",
         color: "hsl(var(--chart-1))",
         holtwinter: "HWScoreTrafficSign",
     },
     HWScoreTrafficSign: {
-        label: "HW Score Traffic Sign",
+        label: "Predicción Puntuación Trafico",
         color: "hsl(var(--chart-2))",
     },
     realScoreTravelTime: {
-        label: "Score Travel Time",
+        label: "Puntuación Tiempo de Recorrido",
         color: "hsl(var(--chart-1))",
         holtwinter: "HWScoreTravelTime",
     },
     HWScoreTravelTime: {
-        label: "HW Score Travel Time",
+        label: "Predicción Puntuación Tiempo de Recorrido",
         color: "hsl(var(--chart-2))",
     },
 } satisfies ChartConfig;
@@ -430,7 +430,6 @@ const Categories = () => {
                 });
 
                 setGetCategoriesData(mappedData);
-                console.log("AQUI ESTOY ", mappedData);
             } catch (err) {
                 console.log('Error fetching data: ', err);
             }
@@ -479,9 +478,6 @@ const Categories = () => {
                     <span className="text-xs text-muted-foreground">
                         {chartConfig[chart].label}
                     </span>
-                    {/* <span className="text-lg font-bold leading-none sm:text-3xl">
-                        {formatNumber(total[key as keyof typeof total])}
-                    </span> */}
                 </button>
                 )
             })}

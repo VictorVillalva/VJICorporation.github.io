@@ -35,8 +35,6 @@ const TableComment = () => {
         };
         getQuejas();
     }, []);
-    console.log("esta son las quejas ->>>>",quejas);
-
 
     const handleInputChange = (id: string, value: string) => {
         setAnswers((prevAnswers) => ({ ...prevAnswers, [id]: value }));
@@ -50,10 +48,7 @@ const TableComment = () => {
             alert('El campo esta vacio, ingresa una respuesta')
             return;
         }
-
-        console.log(`Enviando respuesta para la queja con ID: ${id}`); // Verifica la ID en la consola
-
-
+        // console.log(`Enviando respuesta para la queja con ID: ${id}`); // Verifica la ID en la consola
         try{
             const response = await axios.post('https://rabbit-go.sytes.net/tm/analyze', {
                 text: answer
@@ -68,7 +63,6 @@ const TableComment = () => {
                         Authorization:`${token}`,
                     },
                 });
-                // Actualizar el estado local con la nueva respuesta
                 setQuejas((prevQuejas:any) =>
                     prevQuejas.map((queja:any) =>
                         queja.id === id
@@ -80,6 +74,7 @@ const TableComment = () => {
             } else if(response.status === 400){
                 alert('Hay groserías en el texto. Por favor, modifica tu respuesta.');
             }
+            
         } catch (e) {
             console.error('Error sending answer:', error);
             alert('Hay groserías en el texto. Por favor, modifica tu respuesta.');
