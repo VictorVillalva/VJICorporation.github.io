@@ -89,7 +89,6 @@ const TableComment = () => {
         </div>
         <div className="table">
             <Table className="scroll h-[900px]">
-                <TableCaption>A list of your recent invoices.</TableCaption>
                 <TableHeader>
                     <TableRow>
                     <TableHead className="w-[100px]">Ruta</TableHead>
